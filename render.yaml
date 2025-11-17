@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: emotional-movie-explorer
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app.server
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
