@@ -356,6 +356,7 @@ def build_network_figure(center_movie_id, mode="intense"):
 default_center_movie_id = int(movies_vad.iloc[0]["movieId"])
 
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div(
     style={
